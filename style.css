@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --header-color: #006666;
+    --body-color: #f5f5f5;
+    --accent-color: #009999;
+    --text-color: #333;
+    --link-hover: #005555;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--body-color);
+    color: var(--text-color);
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+header {
+    background-color: var(--header-color);
+    padding: 20px;
+    color: #fff;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 1.8rem;
+}
+
+main {
+    min-height: 78vh;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+main form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+form input[type="text"],
+form button,
+.result div a {
+    border: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    border-radius: 0.5rem;
+    padding: 12px 15px;
+    transition: all 0.3s ease;
+}
+
+form input[type="text"] {
+    flex-grow: 1;
+    outline: none;
+    background-color: #fff;
+    border: 1px solid #ccc;
+}
+
+form input[type="text"]::placeholder {
+    color: #aaa;
+}
+
+form button,
+.result div a {
+    background-color: var(--accent-color);
+    color: #fff;
+    cursor: pointer;
+}
+
+form button:hover,
+.result div a:hover {
+    background-color: var(--link-hover);
+}
+
+.result {
+    display: none;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 0.5rem;
+    margin-top: 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.result h2 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+.result p {
+    margin-top: 10px;
+}
+
+.result .partOfSpeech {
+    font-style: italic;
+    color: #808080;
+    margin-top: 2px;
+}
+
+.result ul {
+    margin-left: 20px;
+    padding-left: 15px;
+    list-style-type: disc;
+}
+
+.result li {
+    padding: 4px 0;
+}
+
+.result div {
+    margin-top: 20px;
+}
+
+.result div a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+footer {
+    background-color: var(--header-color);
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+    font-size: 1rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsive for small screens */
+@media screen and (max-width: 600px) {
+    main form {
+        flex-direction: column;
+    }
+
+    form button {
+        margin-top: 10px;
+        width: 100%;
+    }
+}
